@@ -83,7 +83,11 @@ result = list(linear_est.predict(eval_input_fn))
 # ask the user for the index of the passenger
 i = int(input('Enter the index of the passenger: '))
 # print the passenger's data as a data grid with column names
-IPython.display.clear_output(wait=True)
+IPython.display.clear_output(wait=True) # clear the output
+
+# # print dictionary of the passenger's data
+# print(result[i])
+
 print("--------------------------------------------------")
 print(dfeval.loc[i].to_frame().T)
 if (print(y_eval.loc[i]) == 1):
@@ -94,7 +98,7 @@ else:
 print("--------------------------------------------------")
 print('Survival chance: {:.2f}%'.format(
     result[i]['probabilities'][1]*100))
-print("--------------------------------------------------")
+print("--------------------------------------------------") 
 
 
 # %%
